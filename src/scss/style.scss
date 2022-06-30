@@ -1,14 +1,9 @@
-$wrap_max-w: 1170px;
+$wrap_max-w: 1210px;
 $out-wrap_max-w: 1595px;
 
-$header-height: 0;
-$footer-minHeight: 275px;
-$aside-width: 325px;
-$main-width: 1fr;
-
-$font-family: "Montserrat", sans-serif;
+$font-family: "Museo Sans Cyrl", sans-serif;
 $font-size: 16px;
-$font-color_main: #909090;
+$font-color_main: #fff;
 $background-color_main: #fff;
 
 $fa-font-path: "./fonts";
@@ -16,6 +11,7 @@ $fa-free: "Font Awesome 6 Free";
 $fa-brands: "Font Awesome 6 Brands";
 
 // -----------------------------------------------------
+
 @import "normalize";
 @import "fonts";
 @import "settings";

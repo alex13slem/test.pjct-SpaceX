@@ -2,15 +2,48 @@
 <html lang="ru">
 
 @@include('html/head.html',{
-"title":" "
+"title":"SpaceX"
 })
 
-<body>
+<body class="body body-wrap">
 	@@include('html/header.html',{})
-	<main>
-		@@include('html/page1/section1.html'{})
+	<main class="main">
+		<div class="main__wrap">
+			<div class="main__proposal">
+				<p class="proposal__text">
+					<span>Путишествие</span><br>на красную планету
+				</p>
+				<form class="proposal__form">
+					<button class="proposal__btn" type="submit">
+						Начать путешествие
+						<div></div>
+					</button>
+				</form>
+			</div>
+			<div class="main__cards main-cards">
+				<article class="main-cards__article article">
+					<p class="article__first-line">мы</p>
+					<p class="article__second-line">1</p>
+					<p class="article__third-line">на рынке</p>
+				</article>
+				<article class="main-cards__article article">
+					<p class="article__first-line">гарантируем</p>
+					<p class="article__second-line">50%</p>
+					<p class="article__third-line">безопасность</p>
+				</article>
+				<article class="main-cards__article article">
+					<p class="article__first-line">календарик за</p>
+					<p class="article__second-line">2001<span> г.</span></p>
+					<p class="article__third-line">в подарок</p>
+				</article>
+				<article class="main-cards__article article">
+					<p class="article__first-line">путешествие</p>
+					<p class="article__second-line">597</p>
+					<p class="article__third-line">дней</p>
+				</article>
+			</div>
+		</div>
 	</main>
-	@@include('html/footer.html',{})
 	<script src="https://kit.fontawesome.com/bda9f69c70.js" crossorigin="anonymous"></script>
 	<script src="js/app.min.js"></script>
 </body>

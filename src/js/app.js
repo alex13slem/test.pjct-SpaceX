@@ -42,15 +42,10 @@ const swiper1 = new Swiper('.swiper1', {
 
 // -------------------------------------------------------
 
-const burgerMain = document.querySelector('.firm-burger');
-const burgerBtnBody = burgerMain.querySelector('.firm-burger__button');
+const header = document.querySelector('.header');
+const burgerBtn = header.querySelector('.burger');
 
-burgerBtnBody.addEventListener('click', evt => {
+burgerBtn.addEventListener('click', evt => {
 
-	burgerMain.classList.toggle('firm-burger_open');
-
-	burgerMain.classList.add('firm-burger_anim');
-	setTimeout(() => burgerMain.classList.remove('firm-burger_anim'), 1000);
-
-	setTimeout(() => burgerMain.classList.toggle('firm-burger_png'), 750);
+	header.classList.toggle('header_open');
 })
