@@ -45,6 +45,9 @@
 	position: relative;
 	padding: 0 25px;
 	background-color: transparent;
+	img {
+		object-fit: contain;
+	}
 	a {
 		display: flex;
 		align-items: center;

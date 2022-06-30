@@ -11,8 +11,8 @@ $fa-free: "Font Awesome 6 Free";
 $fa-brands: "Font Awesome 6 Brands";
 
 // -----------------------------------------------------
-
-@import "normalize";
+@import "normalize.css";
+@import "normalize.scss";
 @import "fonts";
 @import "settings";
 // -----------------------------------------------------
