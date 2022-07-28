@@ -1,12 +1,5 @@
-# GULP-new-project
-Basic template for GULP
+# TEST PROJECT Space X (Static)
 
-<b>При новой сборке:</b> <code> npm i </code>
+Test project for SAGIROV web studio.
 
-<b>Режим разработчика:</b> <code> npm run dev </code> <br>
-<b>Режим вывода проекта:</b> <code> npm run build </code>
-
-<b>Сгенерировать спрайты:</b> <code> npm run svgSprive </code>
-
-<b>Сгенерировать ZIP файл проекта:</b> <code> npm run zip </code> <br>
-<b>Вывести проект через FTP:</b>  <code> npm run ftp </code> - настройки вывода в папке gulp/config
+30.06.2022
