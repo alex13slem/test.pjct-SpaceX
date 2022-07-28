@@ -1,0 +1,40 @@
+$wrap_max-w: 1210px;
+$out-wrap_max-w: 1595px;
+
+$font-family: "Museo Sans Cyrl", sans-serif;
+$font-size: 16px;
+$font-color_main: #fff;
+$background-color_main: #fff;
+
+$fa-font-path: "./fonts";
+$fa-free: "Font Awesome 6 Free";
+$fa-brands: "Font Awesome 6 Brands";
+
+// -----------------------------------------------------
+/* ----------1. Сброс CSS (START)----------------- */
+@import "normalize.scss";
+/* ----------1. Сброс CSS (END)------------------- */
+
+/* ----------2. Подключение модулей (START)------- */
+
+/* ----------2.1 BOOTSTRAP 4.6.1 (START)---------- */
+@import "../../node_modules/bootstrap/scss/bootstrap";
+/* ----------2.1 BOOTSTRAP 4.6.1 (END)------- */
+
+/* ----------2. Подключение модулей (END)------- */
+
+/* ----------3. Подключение шрифтов (START)------- */
+@import "fonts";
+/* ----------3. Подключение шрифтов (END)--------- */
+
+/* ----------4. Базовые настройки проекта (START)- */
+@import "settings";
+/* ----------4. Базовые настройки проекта (END)--- */
+
+/* ----------5.1 HEADER (START)-------------------- */
+@import "./components/header";
+/* ----------5.1 HEADER (END)---------------------- */
+
+/* ----------5.2 MAIN (START)---------------------- */
+@import "./components/main";
+/* ----------5.2 MAIN (END)------------------------ */

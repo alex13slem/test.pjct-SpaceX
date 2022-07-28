@@ -20,7 +20,7 @@ export const scss = () => {
 		.pipe(sass({
 			outputStyle: 'expanded'
 		}))
-		.pipe(app.plugins.replace(/@img\//g, '../img/'))
+		.pipe(app.plugins.replace(/@img\//g, '../image/'))
 		.pipe(
 			app.plugins.if(
 				app.isBuild,

@@ -7,45 +7,49 @@
 
 <body class="body body-wrap">
 	@@include('html/header.html',{})
+	<!-- BEGIN MAIN -->
 	<main class="main">
-		<div class="main__wrap">
-			<div class="main__proposal">
-				<p class="proposal__text">
-					<span>Путeшествие</span><br>на красную планету
-				</p>
-				<form class="proposal__form">
-					<button class="proposal__btn" type="submit">
-						Начать путешествие
-						<div></div>
-					</button>
-				</form>
-			</div>
-			<div class="main__cards main-cards">
-				<article class="main-cards__article article">
-					<p class="article__first-line">мы</p>
-					<p class="article__second-line">1</p>
-					<p class="article__third-line">на рынке</p>
-				</article>
-				<article class="main-cards__article article">
-					<p class="article__first-line">гарантируем</p>
-					<p class="article__second-line">50%</p>
-					<p class="article__third-line">безопасность</p>
-				</article>
-				<article class="main-cards__article article">
-					<p class="article__first-line">календарик за</p>
-					<p class="article__second-line">2001<span> г.</span></p>
-					<p class="article__third-line">в подарок</p>
-				</article>
-				<article class="main-cards__article article">
-					<p class="article__first-line">путешествие</p>
-					<p class="article__second-line">597</p>
-					<p class="article__third-line">дней</p>
-				</article>
+		<div class="container">
+			<div class="row justify-content-xl-between justify-content-center align-content-start flex-grow-1">
+				<div class="col-12 col-md-8 col-xl-7 h-50 main__proposal">
+					<p class="proposal__text">
+						<span>Путeшествие</span><br>на красную планету
+					</p>
+					<form class="proposal__form">
+						<input type="button" value="Начать путешествие" class="proposal__btn" type="submit">
+
+						<span></span>
+						</input>
+					</form>
+				</div>
+				<div class="cards-block col-12 col-md-4 h-50 main__cards">
+					<div class="cards-block__card card">
+						<p class="card__first-line">мы</p>
+						<p class="card__second-line">1</p>
+						<p class="card__third-line">на рынке</p>
+					</div>
+					<div class="cards-block__card card">
+						<p class="card__first-line">гарантируем</p>
+						<p class="card__second-line">50%</p>
+						<p class="card__third-line">безопасность</p>
+					</div>
+					<div class="cards-block__card card">
+						<p class="card__first-line">календарик за</p>
+						<p class="card__second-line">2001<span> г.</span></p>
+						<p class="card__third-line">в подарок</p>
+					</div>
+					<div class="cards-block__card card">
+						<p class="card__first-line">путешествие</p>
+						<p class="card__second-line">597</p>
+						<p class="card__third-line">дней</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
+	<!-- END MAIN -->
 	<script src="https://kit.fontawesome.com/bda9f69c70.js" crossorigin="anonymous"></script>
-	<script src="js/app.min.js"></script>
+	<script src="js/template.min.js"></script>
 </body>
 
 </html>

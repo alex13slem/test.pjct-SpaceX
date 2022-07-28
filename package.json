@@ -18,6 +18,7 @@
     "gulp": "^4.0.2"
   },
   "devDependencies": {
+    "bootstrap": "^4.6.2",
     "browser-sync": "latest",
     "del": "latest",
     "fs": "latest",
@@ -42,6 +43,8 @@
     "gulp-webp-html-nosvg": "latest",
     "gulp-webpcss": "latest",
     "gulp-zip": "latest",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1",
     "replace": "latest",
     "sass": "latest",
     "swiper": "latest",
