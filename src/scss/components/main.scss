@@ -4,7 +4,7 @@
 	position: relative;
 	&::after {
 		position: absolute;
-		z-index: 0;
+		z-index: -1;
 		content: "";
 		background: url("@img/planet.png") 50% 50% / auto 61% no-repeat;
 		width: 100%;
@@ -34,7 +34,7 @@
 .proposal {
 	&__text {
 		position: relative;
-		z-index: -1;
+		z-index: -2;
 		width: fit-content;
 		font-size: 25px;
 		color: transparent;
@@ -48,7 +48,7 @@
 			line-height: 1.2;
 		}
 		@media (max-width: 1279px) {
-			z-index: 1;
+			z-index: 0;
 		}
 		@media (max-width: 475px) {
 			font-size: 18px;
@@ -60,9 +60,9 @@
 
 	&__form {
 		position: fixed;
+		z-index: 100;
 		bottom: 38%;
 		left: calc(50% - 607px);
-		z-index: 1;
 		@media (max-width: 1279px) {
 			position: static;
 		}
@@ -81,9 +81,72 @@
 		}
 	}
 
+	&__modal {
+		z-index: 100;
+		position: fixed;
+		top: calc(50% - 265px);
+		left: calc(50% - 400px);
+		width: 800px;
+		height: 530px;
+
+		padding: 7vmin 2vmax;
+
+		color: #ffffff9c;
+
+		border-style: solid;
+		border-width: 1px;
+		border-image-source: linear-gradient(189deg, #263e66 20%, #09213d 40%, #111f2d 61%, #23599c 79%);
+		border-image-slice: 1;
+		background-color: rgba(0, 0, 0, 0.95);
+
+		box-shadow: 0 0 80px 50px #00020c;
+
+		legend {
+			width: fit-content;
+			text-transform: uppercase;
+		}
+		&-input {
+		}
+		&-text {
+		}
+		&-btn {
+		}
+		label {
+			margin-bottom: 4vmin;
+			display: block;
+		}
+		input,
+		textarea {
+			padding: 3px 5px;
+			border-style: solid;
+			border-width: 1px;
+			border-image-source: linear-gradient(189deg, #263e66 20%, #09213d 40%, #111f2d 61%, #23599c 79%);
+			border-image-slice: 1;
+			background-color: rgba(0, 0, 0, 0.21);
+			resize: none;
+		}
+		textarea {
+			height: 112px;
+			width: 100%;
+		}
+		button {
+			margin-right: 10px;
+			padding: 5px 10px;
+			border-style: solid;
+			border-width: 1px;
+			border-image-source: linear-gradient(189deg, #263e66 20%, #09213d 40%, #111f2d 61%, #23599c 79%);
+			border-image-slice: 1;
+			background-color: rgba(0, 0, 0, 0.21);
+			color: #ffffff9c;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
 	&__btn {
 		position: relative;
-		z-index: 1;
 		width: 180px;
 		height: 35px;
 		margin-top: 68px;
@@ -140,8 +203,9 @@
 }
 
 .cards-block {
+	position: relative;
+	z-index: 0;
 	margin-top: 60px;
-	z-index: 1;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 10px;

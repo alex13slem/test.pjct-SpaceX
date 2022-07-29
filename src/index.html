@@ -5,7 +5,7 @@
 "title":"SpaceX"
 })
 
-<body class="body body-wrap">
+<body class="body">
 	@@include('html/header.html',{})
 	<!-- BEGIN MAIN -->
 	<main class="main">
@@ -15,11 +15,23 @@
 					<p class="proposal__text">
 						<span>Путeшествие</span><br>на красную планету
 					</p>
-					<form class="proposal__form">
-						<input type="button" value="Начать путешествие" class="proposal__btn" type="submit">
-
+					<form class="proposal__form" action="/" method="post">
+						<input type="button" value="Начать путешествие" class="proposal__btn">
 						<span></span>
-						</input>
+						<fieldset class="proposal__modal">
+							<legend>Написать Илону:</legend>
+							<label class="proposal__modal-input"> Ваше имя:
+								<input type="text" placeholder="Имя" required>
+							</label>
+							<label class="proposal__modal-input"> Ваш email:
+								<input type="email" placeholder="Email" required>
+							</label>
+							<label class="proposal__modal-text">Текст сообщения:
+								<textarea placeholder="Введите ваше сообщение" required></textarea>
+							</label>
+							<button class="proposal__modal-btn" type="submit">Отправить</button>
+							<button class="proposal__modal-btn" type="reset">Очистить</button>
+						</fieldset>
 					</form>
 				</div>
 				<div class="cards-block col-12 col-md-4 h-50 main__cards">
