@@ -11,11 +11,47 @@
 	<main class="main">
 		<div class="container">
 			<div class="row justify-content-xl-between justify-content-center align-content-start flex-grow-1">
-				<div class="col-12 col-md-8 col-xl-7 h-50 main__proposal">
+				<div class="proposal col-12 col-md-8 col-xl-7 h-50 main__proposal">
+
 					<p class="proposal__text">
 						<span>Путeшествие</span><br>на красную планету
 					</p>
-					<form class="proposal__form" action="/" method="post">
+
+					<!-- Button trigger modal -->
+					<button type="button" class="proposal__btn firm-btn" data-toggle="modal" data-target="#form-modal">
+						Начать путешествие
+						<span></span>
+					</button>
+
+
+					<!-- Modal -->
+					<div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby=""
+						aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content proposal__modal">
+								<div class="modal-header">
+									<h5 class="modal-title" id="">Напиши Илону в ЛС</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form action="" method="get" id="form">
+
+										<input type="text" placeholder="Имя" required>
+										<input type="email" placeholder="Email" required>
+										<textarea placeholder="Введите ваше сообщение" required></textarea>
+
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="firm-btn" data-dismiss="modal">Закрыть</button>
+									<button type="submit" form="form" class="firm-btn firm-btn_red">Отправить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <form class="proposal__form" action="/" method="post">
 						<input type="button" value="Начать путешествие" class="proposal__btn">
 						<span></span>
 						<fieldset class="proposal__modal">
@@ -32,7 +68,7 @@
 							<button class="proposal__modal-btn" type="submit">Отправить</button>
 							<button class="proposal__modal-btn" type="reset">Очистить</button>
 						</fieldset>
-					</form>
+					</form> -->
 				</div>
 				<div class="cards-block col-12 col-md-4 h-50 main__cards">
 					<div class="cards-block__card card">
