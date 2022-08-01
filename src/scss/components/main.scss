@@ -162,7 +162,7 @@
 			min-height: 150px;
 			resize: none;
 		}
-		input[type="email"],
+		.email,
 		textarea {
 			grid-column: span 2;
 		}
@@ -177,11 +177,43 @@
 			border-image-slice: 1;
 			background-color: rgba(6, 6, 6, 0.666);
 
+			transition: border-image-source 0.3s ease;
+
 			@media (max-width: 500px) {
 				grid-column: span 2;
 			}
 		}
+		.form-control {
+			border-radius: 0;
+			box-shadow: none;
+
+			transition: box-shadow 0.3s ease;
+			&:focus {
+				box-shadow: 0 0 19px 0rem rgba(53, 56, 220, 0.25);
+			}
+		}
+		.was-validated {
+			.form-control {
+				&:invalid,
+				.is-invalid {
+					box-shadow: none;
+					border-image-source: linear-gradient(189deg, #663a26 20%, #3d1809 40%, #2d1411 61%, #9c2323 79%);
+				}
+				&:focus {
+					box-shadow: 0 0 19px 0rem rgb(220 53 69 / 25%);
+					border-image-source: linear-gradient(189deg, #663a26 20%, #3d1809 40%, #2d1411 61%, #9c2323 79%);
+				}
+			}
+		}
+		.attention {
+			margin: 18px 0 0;
+			font-size: 10px;
+			font-weight: 100;
+			line-height: 1em;
+			text-align: right;
+		}
 	}
+
 	.modal-footer {
 		.firm-btn {
 			color: #fffffff5;

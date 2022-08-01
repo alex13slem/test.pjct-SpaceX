@@ -36,14 +36,17 @@
 									</button>
 								</div>
 								<div class="modal-body">
-									<form action="" method="get" id="form">
+									<form action="" method="get" id="form" class="needs-validation" novalidate>
 
-										<input type="text" placeholder="Имя" required>
-										<input type="text" placeholder="Фамилия" required>
-										<input type="email" placeholder="Email или Ваш телефон" required>
-										<textarea placeholder="Введите ваше сообщение" required></textarea>
+										<input class="form-control name" type="text" placeholder="Имя" required>
+										<input class="form-control surname" type="text" placeholder="Фамилия" required>
+										<input class="form-control email" type="text" placeholder="Email или Ваш телефон"
+											required>
+										<textarea class="form-control" placeholder="Введите ваше сообщение" required></textarea>
 
 									</form>
+									<p class="attention">Нажимая на кнопку "Отправить" Вы соглашаетесь на обработку
+										персональных данных.</p>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="firm-btn" data-dismiss="modal">Закрыть</button>
