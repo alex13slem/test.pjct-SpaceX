@@ -1,5 +1,5 @@
-$wrap_max-w: 1210px;
-$out-wrap_max-w: 1595px;
+// $wrap_max-w: 1210px;
+// $out-wrap_max-w: 1595px;
 
 $font-family: "Museo Sans Cyrl", sans-serif;
 $font-size: 16px;
@@ -11,6 +11,7 @@ $fa-free: "Font Awesome 6 Free";
 $fa-brands: "Font Awesome 6 Brands";
 
 // -----------------------------------------------------
+
 /* ----------1. Сброс CSS (START)----------------- */
 @import "normalize.scss";
 /* ----------1. Сброс CSS (END)------------------- */
@@ -31,10 +32,10 @@ $fa-brands: "Font Awesome 6 Brands";
 @import "settings";
 /* ----------4. Базовые настройки проекта (END)--- */
 
-/* ----------5.1 HEADER (START)-------------------- */
+/* ----------5.1 HEADER -------------------- */
 @import "./components/header";
-/* ----------5.1 HEADER (END)---------------------- */
+/* ----------5.1 HEADER ---------------------- */
 
-/* ----------5.2 MAIN (START)---------------------- */
+/* ----------5.2 MAIN ---------------------- */
 @import "./components/main";
-/* ----------5.2 MAIN (END)------------------------ */
+/* ----------5.2 MAIN------------------------ */
