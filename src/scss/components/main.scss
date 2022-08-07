@@ -27,14 +27,12 @@
 
 /*---------main start---------*/
 .main {
-	flex: 1 1 auto;
-	display: flex;
-	flex-direction: column;
+	flex: 1 0 auto;
 	&__proposal {
-		margin-top: 120px;
+		margin-top: calc(0.1% + 10vh);
 	}
 	&__cards {
-		margin-top: 50px;
+		margin-top: calc(0.1% + 9vh);
 	}
 }
 /*---------main end------------*/
@@ -42,6 +40,9 @@
 @media (max-width: 500px) {
 	.main {
 		&__proposal {
+			margin-top: 50px;
+		}
+		&__cards {
 			margin-top: 50px;
 		}
 	}
@@ -74,7 +75,7 @@
 
 		z-index: 100;
 		position: absolute;
-		bottom: 38%;
+		bottom: calc(32% + 50px);
 		left: calc(50% - 607px);
 
 		&:hover {
@@ -151,62 +152,102 @@
 		}
 	}
 	.modal-body {
-		form {
-			display: grid;
-			grid-row-gap: 12px;
-			grid-column-gap: 20px;
-			grid-template-columns: repeat(2, 1fr);
-			grid-auto-flow: dense;
+		label {
+			display: block;
+			margin-bottom: 12px;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 		textarea {
 			min-height: 150px;
 			resize: none;
 		}
-		.email,
-		textarea {
-			grid-column: span 2;
-		}
-		input,
-		textarea {
+		.form-control {
 			width: 100%;
 			padding: 4px 10px;
+
+			color: #ffffffe7;
 
 			border-style: solid;
 			border-width: 1px;
 			border-image-source: linear-gradient(189deg, #263e66 20%, #09213d 40%, #111f2d 61%, #23599c 79%);
 			border-image-slice: 1;
-			background-color: rgba(6, 6, 6, 0.666);
-
-			transition: border-image-source 0.3s ease;
-
-			@media (max-width: 500px) {
-				grid-column: span 2;
-			}
-		}
-		.form-control {
 			border-radius: 0;
 			box-shadow: none;
+			background-color: rgba(6, 6, 6, 0.666);
 
-			transition: box-shadow 0.3s ease;
+			transition: box-shadow 0.3s ease, border-image-source 0.3s ease;
+
 			&:focus {
+				border-image-source: linear-gradient(189deg, #263e66 20%, #193758 40%, #214263 61%, #23599c 79%);
 				box-shadow: 0 0 19px 0rem rgba(53, 56, 220, 0.25);
 			}
 		}
+
 		.was-validated {
-			.form-control {
-				&:invalid,
-				.is-invalid {
+			input,
+			textarea {
+				&:invalid {
 					box-shadow: none;
 					border-image-source: linear-gradient(189deg, #663a26 20%, #3d1809 40%, #2d1411 61%, #9c2323 79%);
+					&:focus {
+						box-shadow: 0 0 19px 0rem rgb(220 53 69 / 25%);
+						border-image-source: linear-gradient(189deg, #663a26 20%, #5a2c1a 40%, #5c251f 61%, #9c2323 79%);
+					}
 				}
-				&:focus {
-					box-shadow: 0 0 19px 0rem rgb(220 53 69 / 25%);
-					border-image-source: linear-gradient(189deg, #663a26 20%, #3d1809 40%, #2d1411 61%, #9c2323 79%);
+				&:valid {
+					box-shadow: none;
+					border-image-source: linear-gradient(189deg, #2b6626 20%, #0f3d09 40%, #132d11 61%, #239c23 79%);
+					&:focus {
+						box-shadow: 0 0 19px 0rem rgba(73, 220, 53, 0.25);
+						border-image-source: linear-gradient(189deg, #2b6626 20%, #27611f 40%, #1f551b 61%, #239c23 79%);
+					}
 				}
 			}
 		}
+
+		.invalid {
+			input,
+			textarea {
+				padding-right: calc(1.5em + 0.75rem) !important;
+				background-image: url("@img/icon/error.svg");
+				background-repeat: no-repeat;
+				background-position: right calc(0.375em + 0.1875rem) center;
+				background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+
+				box-shadow: none;
+				border-image-source: linear-gradient(189deg, #663a26 20%, #3d1809 40%, #2d1411 61%, #9c2323 79%);
+				&:focus {
+					box-shadow: 0 0 19px 0rem rgb(220 53 69 / 25%);
+					border-image-source: linear-gradient(189deg, #663a26 20%, #5a2c1a 40%, #5c251f 61%, #9c2323 79%);
+				}
+			}
+		}
+
+		.valid {
+			input,
+			textarea {
+				padding-right: calc(1.5em + 0.75rem) !important;
+				background-image: url("@img/icon/done.svg");
+				background-repeat: no-repeat;
+				background-position: right calc(0.375em + 0.1875rem) center;
+				background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+
+				box-shadow: none;
+				border-image-source: linear-gradient(189deg, #2b6626 20%, #0f3d09 40%, #132d11 61%, #239c23 79%);
+				&:focus {
+					box-shadow: 0 0 19px 0rem rgba(73, 220, 53, 0.25);
+					border-image-source: linear-gradient(189deg, #2b6626 20%, #27611f 40%, #1f551b 61%, #239c23 79%);
+				}
+			}
+		}
+
 		.attention {
 			margin: 18px 0 0;
+
+			grid-column: span 2;
+
 			font-size: 10px;
 			font-weight: 100;
 			line-height: 1em;
@@ -222,6 +263,10 @@
 		border-image-source: linear-gradient(189deg, #263e66 20%, #09213d 40%, #111f2d 61%, #23599c 79%);
 		border-image-slice: 1;
 	}
+}
+
+.modal-dialog > div {
+	flex: 1;
 }
 
 .firm-btn {
@@ -260,6 +305,7 @@
 		&__btn {
 			position: relative;
 			left: auto;
+			margin-left: 0;
 
 			span {
 				display: none;
@@ -279,6 +325,14 @@
 			margin-top: 20px;
 		}
 	}
+	.proposal-modal {
+		.modal-body {
+			input,
+			textarea {
+				grid-column: span 2;
+			}
+		}
+	}
 }
 /*---------sect-proposal media end---------*/
 
@@ -286,7 +340,6 @@
 .cards-block {
 	position: relative;
 	z-index: 0;
-	margin-top: 60px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 10px;

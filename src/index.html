@@ -23,7 +23,6 @@
 						<span></span>
 					</button>
 
-
 					<!-- Modal -->
 					<div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby=""
 						aria-hidden="true">
@@ -38,14 +37,23 @@
 								<div class="modal-body">
 									<form action="" method="get" id="form" class="needs-validation" novalidate>
 
-										<input class="form-control name" type="text" placeholder="Имя" required>
-										<input class="form-control surname" type="text" placeholder="Фамилия" required>
-										<input class="form-control email" type="text" placeholder="Email или Ваш телефон"
-											required>
-										<textarea class="form-control" placeholder="Введите ваше сообщение" required></textarea>
+										<label class="invalid">
+											<input class="form-control name" type="text" placeholder="Имя" required>
+										</label>
+										<label class="valid">
+											<input class="form-control surname" type="text" placeholder="Фамилия" required>
+										</label>
+										<label>
+											<input class="form-control email" type="text" placeholder="Email или Ваш телефон"
+												required>
+										</label>
+										<label>
+											<textarea class="form-control" placeholder="Введите ваше сообщение"
+												required></textarea>
+										</label>
 
 									</form>
-									<p class="attention">Нажимая на кнопку "Отправить" Вы соглашаетесь на обработку
+									<p class="attention">*Нажимая на кнопку "Отправить", Вы соглашаетесь на обработку
 										персональных данных.</p>
 								</div>
 								<div class="modal-footer">

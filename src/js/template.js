@@ -3,42 +3,40 @@ import 'bootstrap';
 
 prjFunctions.isWebp();
 
-(() => {
-
-	window.addEventListener('load', () => {
-
-		// Получите все формы, к которым мы хотим применить пользовательские стили проверки Bootstrap
-		const forms = document.getElementsByClassName('needs-validation');
-
-		// Зацикливайтесь на них и предотвращайте подчинение
-		const validation = Array.prototype.filter.call(forms, (form) => {
 
 
-			form.addEventListener('submit', (event) => {
+window.addEventListener('load', () => {
 
-				const emailInput = form.querySelector('.email')
-				let emailInputValue
 
-				const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-				const phoneFormat =
-					/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
 
-				if (emailInput.value.match(mailFormat) ||
-					emailInput.value.match(phoneFormat)) {
-					emailInput.setCustomValidity("");
-				} else {
-					emailInput.setCustomValidity("invalid");
+	const form = document.querySelector('.needs-validation');
 
-				}
+	const info = document.querySelector('.info')
 
-				if (form.checkValidity() === false) {
+	const emailPhoneInput = form.querySelector('.email')
 
-					event.preventDefault();
-					event.stopPropagation();
-				}
+	const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	const phoneFormat = /^[+]?([\d]{0,3})?[\(\.\-\s]?([\d]{3})[\)\.\-\s]*([\d]{3})[\.\-\s]?([\d]{4})$/;
 
-				form.classList.add('was-validated');
-			}, false);
-		});
-	}, false);
-})();
+	emailPhoneInput.addEventListener('input', (input) => {
+		if (input.target.value.match(mailFormat) || input.target.value.match(phoneFormat)) {
+			emailPhoneInput.setCustomValidity("");
+		} else {
+			emailPhoneInput.setCustomValidity("invalid");
+		}
+	})
+
+	form.addEventListener('submit', (event) => {
+
+		if (!form.checkValidity()) {
+
+			event.preventDefault();
+			event.stopPropagation();
+
+			form.classList.add('was-validated');
+
+		}
+
+	})
+
+})

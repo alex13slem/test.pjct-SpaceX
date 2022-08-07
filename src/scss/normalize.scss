@@ -380,10 +380,15 @@ dd {
 
 html {
 	overflow-x: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 body {
-	min-height: 100vh;
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
 	scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
 	line-height: 1.22;
