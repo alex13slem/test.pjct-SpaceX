@@ -13,30 +13,54 @@ window.addEventListener('load', () => {
 
 	const info = document.querySelector('.info')
 
-	const emailPhoneInput = form.querySelector('.email')
+	const emailPhoneInput = form.querySelector('.emailPhone')
+	const emailInput = form.querySelector('.email')
+	const phoneInput = form.querySelector('.phone')
 
-	const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-	const phoneFormat = /^[+]?([\d]{0,3})?[\(\.\-\s]?([\d]{3})[\)\.\-\s]*([\d]{3})[\.\-\s]?([\d]{4})$/;
+	const emailFormat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	const phoneFormat = /^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$/;
 
-	emailPhoneInput.addEventListener('input', (input) => {
-		if (input.target.value.match(mailFormat) || input.target.value.match(phoneFormat)) {
-			emailPhoneInput.setCustomValidity("");
-		} else {
-			emailPhoneInput.setCustomValidity("invalid");
-		}
-	})
+	if (emailPhoneInput) {
+		emailPhoneInput.addEventListener('input', (input) => {
+			if (input.target.value.match(emailFormat) || input.target.value.match(phoneFormat)) {
+				emailPhoneInput.setCustomValidity("");
+			} else {
+				emailPhoneInput.setCustomValidity("invalid");
+			}
+		})
+	}
 
-	form.addEventListener('submit', (event) => {
+	if (emailInput) {
+		emailInput.addEventListener('input', (input) => {
+			console.log(input.target.value.match(emailFormat))
+			if (input.target.value.match(emailFormat)) {
+				emailInput.setCustomValidity("");
+			} else {
+				emailInput.setCustomValidity("invalid");
+			}
+		})
+	}
 
-		if (!form.checkValidity()) {
+	if (phoneInput) {
+		phoneInput.addEventListener('input', (input) => {
+			if (input.target.value.match(phoneFormat)) {
+				phoneInput.setCustomValidity("");
+			} else {
+				phoneInput.setCustomValidity("invalid");
+			}
+		})
+	}
 
-			event.preventDefault();
-			event.stopPropagation();
+	if (form) {
+		form.addEventListener('submit', (event) => {
+			if (!form.checkValidity()) {
 
-			form.classList.add('was-validated');
+				event.preventDefault();
+				event.stopPropagation();
 
-		}
-
-	})
+				form.classList.add('was-validated');
+			}
+		})
+	}
 
 })

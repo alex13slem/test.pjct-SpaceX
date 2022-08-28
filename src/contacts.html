@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html',{
+"title":"SpaceX"
+})
+
+<body class="body">
+	@@include('html/header.html',{})
+	<!-- BEGIN MAIN -->
+	<main class="main">
+		<div class="container main-contacts">
+			<div class="row">
+				<!-- Section Titile -->
+				<div class="col-md-12">
+					<h1 class="section-title">Контакты</h1>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Section Titile -->
+				<div class="col-md-6 mt-3 d-flex flex-column justify-content-between">
+					<div class="main-contacts__info">
+						<p>Подробности проекта представлены основателем компании SpaceX Илоном Маском 27 сентября 2016 года на
+							67-м Международном конгрессе по астронавтике в Гвадалахаре, Мексика.
+						</p>
+						<p>
+							Наиболее оптимистичный временной график предполагает первый полёт к Марсу в 2022 году (доставка
+							груза), первый полёт с экипажем ожидался в 2024 году, с прибытием на Марс в 2025 году.
+						</p>
+						<p>
+							Успей записаться!
+						</p>
+					</div>
+
+					<div class="main-contacts__widgets">
+						<div class="find-widget">
+							<strong>Адрес:</strong> 1 Rocket Road
+							Hawthorne, CA 90250
+							United States
+						</div>
+						<div class="find-widget">
+							<strong>Телефон:</strong> <a href="tel:310-363-6000" target="_blank">310-363-6000</a>
+						</div>
+
+						<div class="find-widget">
+							<strong>Почта:</strong> <a href="mailto:sales@spacex.com">sales@spacex.com</a>
+						</div>
+					</div>
+				</div>
+				<!-- contact form -->
+				<div class="col-md-6">
+					<form action="" method="get" id="form" class="form-body needs-validation" novalidate>
+
+						<label>
+							<input class="form-control name" type="text" placeholder="Имя" required>
+						</label>
+						<label>
+							<input class="form-control surname" type="text" placeholder="Фамилия" required>
+						</label>
+						<label>
+							<input class="form-control email" type="email" placeholder="Email" required>
+						</label>
+						<label>
+							<input class="form-control phone" type="tel" placeholder="Телефон" required>
+						</label>
+						<label>
+							<textarea class="form-control" placeholder="Введите ваше сообщение" required></textarea>
+						</label>
+						<p class="attention">
+							*Нажимая на кнопку "Отправить", Вы соглашаетесь на обработку
+							персональных данных.
+						</p>
+						<button type="submit" form="form" class="form-body__btn firm-btn firm-btn_red">Отправить</button>
+					</form>
+
+
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- END MAIN -->
+	<script src="js/template.min.js"></script>
+</body>
+
+</html>
